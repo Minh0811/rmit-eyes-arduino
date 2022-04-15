@@ -1,5 +1,6 @@
+//src: https://surtrtech.com/2019/05/04/arduino-contactless-thermometer-with-mlx90614-oled-lcd/
 //Read the temperature value from the sensor every 0.5 seconds
-
+//correct range around 25cm
 
 #include <Wire.h>
 #include <Adafruit_MLX90614.h>
