@@ -1,4 +1,4 @@
-#include <Servo.h>
+3#include <Servo.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include <WiFiClient.h>
@@ -44,12 +44,14 @@ void setup() {
    pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
    pinMode(echoPin, INPUT); // Sets the echoPin as an Input
 
-   3 WiFi.begin(ssid, password);
+   WiFi.begin(ssid, password);
    while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
    }
    Serial.println("WiFi connected");
+   Serial.print("IP address:\t");
+   Serial.println(WiFi.softAPIP()); 
    delay(1000);
    mlx.begin();
 }
@@ -94,10 +96,18 @@ void httpPost(){
       // Specify content-type header
       http.addHeader("Content-Type", "text/plain");
       // Data to send with HTTP POST
-    //   String httpRequestData = temperature;           
+         
       // Send HTTP POST request
       int httpResponseCode = http.POST("Hello, World!");
       
+      // If you need an HTTP request with a content type: application/json, use the following:
+      //http.addHeader("Content-Type", "application/json");
+      //int httpResponseCode = http.POST("{\"api_key\":\"tPmAT5Ab3j7F9\",\"sensor\":\"BME280\",\"value1\":\"24.25\",\"value2\":\"49.54\",\"value3\":\"1005.14\"}");
+
+      // If you need an HTTP request with a content type: text/plain
+      //http.addHeader("Content-Type", "text/plain");
+      //int httpResponseCode = http.POST("Hello, World!");
+     
       Serial.print("HTTP Response code: ");
       Serial.println(httpResponseCode);
         
@@ -115,7 +125,7 @@ void httpPost(){
 void loop(){
 ultraSonic();
 printTemp();
-httpPost()
+httpPost();
 Serial.println();
 delay(500);
 }
