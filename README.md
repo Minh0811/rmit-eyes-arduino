@@ -40,3 +40,5 @@ Button: If pressed the micro servo will rotate 120 degree and if not, it goes ba
 <p>Loop function:</p>
 
 ![](images/loop.png)
+
+<p>Sent me an email if you have any trouble: vokhaiminh0811@gmail.com</p>
