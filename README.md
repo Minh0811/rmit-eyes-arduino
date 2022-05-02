@@ -14,6 +14,7 @@ Brief ussage of each components:
 Button: If pressed the micro servo will rotate 120 degree and if not, it goes back to 0 degree </li>
 
 <p>library used: </p>
+
 ![](images/Libraries.png)
 
 <p>Variables: </p>
