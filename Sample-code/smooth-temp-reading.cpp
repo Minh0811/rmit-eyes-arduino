@@ -1,5 +1,5 @@
 //src: https://miliohm.com/mlx90614-distance-range-text-and-distance-extension/
-//range: 40-50cm
+//the code below allow you to read temperature much more stable and accurate
 
 
 #include <Wire.h>
