@@ -8,34 +8,34 @@ Components contain: Arduino Uno, MLX90614, HC-SR04, micro servo motor, a physica
 
 Brief ussage of each components: 
 <li>MLX90614: To capture the temperature of the object; or in this case, body temperature</li>
-MLX90614: To capture the temperature of the object; or in this case, body temperature
-HC-SR04(Ultra Sensor): To detect the distance of the object and only record temperature data if only the object is in a certain distance
-Micro servo: This is the automatic door that is control by the button
-Button: If pressed the micro servo will rotate 120 degree and if not, it goes back to 0 degree 
+<li>HC-SR04(Ultra Sensor): To detect the distance of the object and only record temperature data if only the object is in a certain distance</li>
+<li>Micro servo: This is the automatic door that is control by the button</li>
+<li>
+Button: If pressed the micro servo will rotate 120 degree and if not, it goes back to 0 degree </li>
 
-library used: 
+<p>library used: </p>
 ![](images/Libraries.png)
 
-Variables: 
+<p>Variables: </p>
 
 ![](images/variables.png)
 
-Setup:
+<p>Setup:</p>
 
 ![](images/setup.png)
 
-Motor control Function:
+<p>Motor control Function:</p>
 
 ![](images/motorFunction.png)
 
-Calculate object distant with HC-SR04:
+<p>Calculate object distant with HC-SR04:</p>
 
 ![](images/ultraSonic.png)
 
-Return Temperature if the object is in the correct distance:
+<p>Return Temperature if the object is in the correct distance:</p>
 
 ![](images/printTemp.png)
 
-Loop function:
+<p>Loop function:</p>
 
 ![](images/loop.png)
